@@ -1,0 +1,34 @@
+#login-register {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: fit-content;
+}
+
+#login-register>.section {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#login-register .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+#login-register>.section input {
+    justify-self: right;
+}
+
+#login-register>.section>button {
+    align-self: flex-end;
+}
+
+#login-register .spacer {
+    margin-top: auto;
+    height: 30px;
+}
