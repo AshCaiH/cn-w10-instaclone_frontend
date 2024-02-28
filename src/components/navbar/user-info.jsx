@@ -1,10 +1,13 @@
-export const Navbar = (props) => {
+export const UserInfo = (props) => {
 
     return (
-        <div className="navbar-userinfo">
-            User Info
+        <div className="navbar-user">
+            <div className="avatar" />
+            <p>User Name</p>
+            <div className="vdivider" />
+            <p>Logout Icon</p>            
         </div>
     )
 }
 
-export default Navbar;
+export default UserInfo;
