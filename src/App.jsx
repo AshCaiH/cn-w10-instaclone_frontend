@@ -13,10 +13,14 @@ function App() {
                 setUser={setUser} 
                 user={user} />
 
-            < LoginRegister 
+            { !user ?
+                < LoginRegister 
                 setUser={setUser} />
-                
-            < ImageGrid />
+
+                :
+
+                < ImageGrid />
+            }
         </>
     )
 }
