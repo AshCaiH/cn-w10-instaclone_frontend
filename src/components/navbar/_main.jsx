@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import "./_style.css"
-import Links from "./links";
-import Logo from "./logo";
 import UserControls from "./user-info";
 
 export const Navbar = (props) => {
@@ -9,7 +7,9 @@ export const Navbar = (props) => {
 
     return (
         <div id="navbar">
-            <Logo />
+            <Link to="/"><div id="logo">
+                Cameraderie Logo
+            </div></Link>
             {props.routes.map((item, index) => {
                 return <Link key={props.key} to={item.path}>{item.title}</Link>
             })}

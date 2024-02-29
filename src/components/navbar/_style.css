@@ -7,7 +7,7 @@
     margin-bottom: 20px;
 }
 
-#navbar>div {
+#navbar div {
     padding: 10px 30px;
 }
 
@@ -31,5 +31,5 @@
 }
 
 #navbar>a {
-    margin: 0 20px;
+    margin-left: 20px;
 }
