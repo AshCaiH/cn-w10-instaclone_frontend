@@ -6,6 +6,8 @@
 }
 
 #image-grid .polaroid {
+    position: relative;
+    display: block;
     margin: 10px;
     background-color: rgb(247, 239, 225);
 }
@@ -17,4 +19,14 @@
 
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+#image-grid .image-controls {
+    display: flex;
+    inline-size: 0;
+    position: absolute;
+    width: fit-content;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
 }

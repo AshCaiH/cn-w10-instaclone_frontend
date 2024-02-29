@@ -42,3 +42,7 @@
     margin: 30px;
     animation: rotating 2s linear infinite;
 }
+
+.like-icon {
+    font-size: 32pt;
+}

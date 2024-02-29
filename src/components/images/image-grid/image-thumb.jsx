@@ -1,6 +1,8 @@
 // props
 // - image
 
+import { ImageControls } from "../image-controls";
+
 export const ImageThumb = (props) => {
     const randomSide = () => {
         if (Math.random() > 0.5) return "100%";
@@ -19,6 +21,8 @@ export const ImageThumb = (props) => {
                 backgroundImage: `url(${props.image.urlSmall})`,
                 // backgroundPositionX: randomSide(),
             }} />
+
+            <ImageControls />
         </div>
     )
 }
