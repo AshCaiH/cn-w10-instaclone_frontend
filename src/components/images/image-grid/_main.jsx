@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ImageThumb } from "./image-thumb";
 
+import { AiOutlineLoading } from "react-icons/ai";
+
 import "./_style.css"
+import { getRequest } from "../../../common/requests";
+import { userContext } from "../../../common/contexts";
 
 export const ImageGrid = (props) => {
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(null);
+    const user = useContext(userContext).user;
 
     useEffect(() => {
         const fetchData = async() => {
@@ -19,11 +24,15 @@ export const ImageGrid = (props) => {
 
     return (
         <div className="section">
-            <div id="image-grid"> 
-                { images.map((item) => {
-                    return <ImageThumb key={item.id} image={item} />
-                }) }
-            </div>
+            { images ?
+                <div id="image-grid"> 
+                    { images.map((item) => {
+                        return <ImageThumb key={item.id} image={item} />
+                    }) }
+                </div>
+                :
+                <AiOutlineLoading className="icon loading-icon"/>
+            }
         </div>
     )
 }

@@ -28,3 +28,29 @@
     align-items: center;
     width: fit-content
 }
+
+@keyframes rotating {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 360deg;
+    }
+}
+
+.loading-icon {
+    font-size: 24pt;
+    margin: 30px;
+    animation: rotating 2s linear infinite;
+}
+
+.like-icon {
+    font-size: 32pt;
+}
+
+.like-icon.liked {
+    color: rgb(196, 57, 2);
+}
+
+.like-icon.not-liked {
+    color: rgb(98, 108, 155);
+}

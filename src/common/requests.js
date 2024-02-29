@@ -4,27 +4,26 @@ const parse = async (response) => {
 
 export async function postRequest(url, query, headers) {
 
-    if (!headers) headers = {}
-
-    headers["Content-Type"] = "application/json";
+    if (!headers) headers = {"Content-Type": "application/json"}
 
     return parse(await fetch(url, {
         method: "POST",
         mode: "cors",
-        headers: { "Content-Type": "application/json" },
+        headers: headers,
         body: query,
     }));
 
 }
 
 
-export async function getRequest(url, headers) {
+export async function getRequest(url, query, headers) {
 
     if (!headers) headers = {}
 
     return parse(await fetch(url, {
         method: "GET",
         headers: headers,
+        body: query,
     }));
 
 }
