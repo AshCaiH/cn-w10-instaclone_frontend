@@ -18,7 +18,7 @@ export const Login = (props) => {
     }
 
     return (
-        <div id="login-form" className="section">
+        <form id="login-form" className="section" onSubmit={(e) => e.preventDefault()}>
             <h2>Login</h2>
             <div className="form-item">Username
                 <input id="login-username" onChange={(e) => setUsername(e.target.value)}></input></div>
@@ -26,7 +26,7 @@ export const Login = (props) => {
                 <input id="login-password" onChange={(e) => setPassword(e.target.value)}></input></div>
             <div className="spacer" />
             <button className="green" onClick={login}>Log In</button>
-        </div>
+        </form>
     )
 }
 

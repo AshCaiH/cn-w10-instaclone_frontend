@@ -19,7 +19,7 @@ export const Register = (props) => {
     }
 
     return (
-        <div id="register-form" className="section">
+        <form id="register-form" className="section" onSubmit={(e) => e.preventDefault()}>
             <h2>Register</h2>
             <div className="form-item">Username
                 <input id="login-username" onChange={(e) => setUsername(e.target.value)}></input></div>
@@ -29,7 +29,7 @@ export const Register = (props) => {
                 <input id="login-password" onChange={(e) => setPassword(e.target.value)}></input></div>                
             <div className="spacer" />
             <button className="green" onClick={register}>Register</button>
-        </div>
+        </form>
     )
 }
 
