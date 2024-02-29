@@ -1,0 +1,20 @@
+#image-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+#image-grid .polaroid {
+    margin: 10px;
+    background-color: rgb(247, 239, 225);
+}
+
+#image-grid .image-thumb {
+    height: 220px;
+    width: 240px;
+    margin: 10px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
