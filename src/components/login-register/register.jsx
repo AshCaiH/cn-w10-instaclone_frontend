@@ -15,6 +15,8 @@ export const Register = (props) => {
 
         const response = await postRequest("http://localhost:5001/user/register", query);
 
+        props.setFeedback(response);
+
         console.log(response);
     }
 

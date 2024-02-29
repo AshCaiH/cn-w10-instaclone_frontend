@@ -8,10 +8,8 @@
 
 #login-register>.section {
     padding: 20px;
-
-    display: flex;
-    flex-direction: column;
     justify-content: start;
+    align-items: start;
 }
 
 #login-register .form-item {

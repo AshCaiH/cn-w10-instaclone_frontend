@@ -13,7 +13,9 @@ export const Login = (props) => {
 
         const response = await postRequest("http://localhost:5001/user/login", query);
 
+        props.setFeedback(response);
         props.setUser(response.user);
+
         console.log(response);
     }
 
