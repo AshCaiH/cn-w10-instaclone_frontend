@@ -18,10 +18,23 @@ export async function postRequest(url, query, headers) {
 
 export async function getRequest(url, query, headers) {
 
-    if (!headers) headers = {}
+    if (!headers) headers = {"Content-Type": "application/json"}
 
     return parse(await fetch(url, {
         method: "GET",
+        headers: headers,
+        body: query,
+    }));
+
+}
+
+
+export async function deleteRequest(url, query, headers) {
+
+    if (!headers) headers = {"Content-Type": "application/json"}
+
+    return parse(await fetch(url, {
+        method: "DELETE",
         headers: headers,
         body: query,
     }));
