@@ -22,7 +22,7 @@ export const ImageThumb = (props) => {
                 // backgroundPositionX: randomSide(),
             }} />
 
-            <ImageControls />
+            <ImageControls image={props.image}/>
         </div>
     )
 }

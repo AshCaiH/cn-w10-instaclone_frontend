@@ -4,14 +4,12 @@ const parse = async (response) => {
 
 export async function postRequest(url, query, headers) {
 
-    if (!headers) headers = {}
-
-    headers["Content-Type"] = "application/json";
+    if (!headers) headers = {"Content-Type": "application/json"}
 
     return parse(await fetch(url, {
         method: "POST",
         mode: "cors",
-        headers: { "Content-Type": "application/json" },
+        headers: headers,
         body: query,
     }));
 
