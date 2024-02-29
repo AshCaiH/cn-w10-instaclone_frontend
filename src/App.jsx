@@ -11,8 +11,8 @@ function App() {
     return (
         <>
             < Navbar />
-            < ImageGrid />
             < LoginRegister />
+            < ImageGrid />
         </>
     )
 }

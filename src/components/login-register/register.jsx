@@ -1,9 +1,22 @@
-export const Register = (props) => {
+import { useState } from "react";
+import { postRequest } from "../../common/requests";
 
-    const register = () => {}
-    const setUsername = () => {}
-    const setEmail = () => {}
-    const setPassword = () => {}
+export const Register = (props) => {
+    const [username, setUsername]   = useState("");
+    const [password, setPassword]   = useState("");
+    const [email, setEmail]         = useState("");
+
+    const register = async () => {
+        const query = JSON.stringify({
+            username:   username,
+            password:   password,
+            email:      email,
+        });
+
+        const response = await postRequest("http://localhost:5001/user/register", query);
+
+        console.log(response);
+    }
 
     return (
         <div id="register-form" className="section">

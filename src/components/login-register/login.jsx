@@ -1,8 +1,20 @@
-export const Login = (props) => {
+import { useState } from "react";
+import { postRequest } from "../../common/requests";
 
-    const login = () => {}
-    const setPassword = () => {}
-    const setUsername = () => {}
+export const Login = (props) => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const login = async () => {
+        const query = JSON.stringify({
+            username:   username,
+            password:   password,
+        });
+
+        const response = await postRequest("http://localhost:5001/user/login", query);
+
+        console.log(response);
+    }
 
     return (
         <div id="login-form" className="section">
