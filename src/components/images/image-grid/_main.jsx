@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ImageThumb } from "./image-thumb";
 
 import { AiOutlineLoading } from "react-icons/ai";
 
 import "./_style.css"
+import { getRequest } from "../../../common/requests";
+import { userContext } from "../../../common/contexts";
 
 export const ImageGrid = (props) => {
     const [images, setImages] = useState(null);
+    const user = useContext(userContext).user;
 
     useEffect(() => {
         const fetchData = async() => {

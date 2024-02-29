@@ -46,3 +46,11 @@
 .like-icon {
     font-size: 32pt;
 }
+
+.like-icon.liked {
+    color: rgb(196, 57, 2);
+}
+
+.like-icon.not-liked {
+    color: rgb(98, 108, 155);
+}

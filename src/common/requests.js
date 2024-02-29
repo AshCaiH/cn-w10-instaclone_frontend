@@ -16,13 +16,14 @@ export async function postRequest(url, query, headers) {
 }
 
 
-export async function getRequest(url, headers) {
+export async function getRequest(url, query, headers) {
 
     if (!headers) headers = {}
 
     return parse(await fetch(url, {
         method: "GET",
         headers: headers,
+        body: query,
     }));
 
 }
