@@ -29,3 +29,7 @@
 #navbar .userinfo-name {
     font-weight: bold;
 }
+
+#navbar>a {
+    margin: 0 20px;
+}

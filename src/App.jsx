@@ -1,27 +1,39 @@
-import { createContext, useContext, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/_main'
-import LoginRegister from './components/login-register/_main'
-import ImageGrid from './components/images/image-grid/_main'
 import { userContext } from './common/contexts'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/home/_main'
 
 function App() {
     const [user, setUser] = useState(null);
 
+    const routes = [{
+        path: "/",
+        element: <Home user={user} setUser={setUser}/>,
+        title: "Home"
+    },{
+        path: "/likes",
+        element: <Home user={user} setUser={setUser}/>,
+        title: "Likes"
+    }]
+
     return (
-        <userContext.Provider value={{ user, setUser }}>            
+        <userContext.Provider value={{ user, setUser }}>
+        < HashRouter basename="">
+
             < Navbar 
                 setUser={setUser} 
-                user={user} />
+                user={user} 
+                routes={routes}/>
 
-            { !user ?
-                < LoginRegister 
-                setUser={setUser} />
+            < Routes >
+                {routes.map((item, index) => {
+                    return <Route path = "/" key={index} element={item.element}/>
+                })}                
+            </Routes >
 
-                :
-
-                < ImageGrid />
-            }
+        </HashRouter>
         </userContext.Provider>
     )
 }
