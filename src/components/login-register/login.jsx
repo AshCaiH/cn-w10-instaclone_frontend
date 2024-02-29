@@ -13,6 +13,7 @@ export const Login = (props) => {
 
         const response = await postRequest("http://localhost:5001/user/login", query);
 
+        props.setUser(response.user);
         console.log(response);
     }
 

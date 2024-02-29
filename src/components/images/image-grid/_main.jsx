@@ -21,7 +21,6 @@ export const ImageGrid = (props) => {
         <div className="section">
             <div id="image-grid"> 
                 { images.map((item) => {
-                    console.log(item);
                     return <ImageThumb key={item.id} image={item} />
                 }) }
             </div>

@@ -4,14 +4,18 @@ import Navbar from './components/navbar/_main'
 import LoginRegister from './components/login-register/_main'
 import ImageGrid from './components/images/image-grid/_main'
 
-
-
-function App() {    
+function App() {
+    const [user, setUser] = useState(null);
 
     return (
         <>
-            < Navbar />
-            < LoginRegister />
+            < Navbar 
+                setUser={setUser} 
+                user={user} />
+
+            < LoginRegister 
+                setUser={setUser} />
+                
             < ImageGrid />
         </>
     )

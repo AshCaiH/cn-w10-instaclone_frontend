@@ -1,7 +1,7 @@
 import "./_style.css"
 import Links from "./links";
 import Logo from "./logo";
-import UserInfo from "./user-info";
+import UserControls from "./user-info";
 
 export const Navbar = (props) => {
 
@@ -9,7 +9,7 @@ export const Navbar = (props) => {
         <div id="navbar">
             <Logo />
             <Links />
-            <UserInfo />
+            <UserControls user={props.user} setUser={props.setUser}/>
         </div>
     )
 }

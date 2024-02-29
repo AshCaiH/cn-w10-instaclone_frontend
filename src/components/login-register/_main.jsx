@@ -7,7 +7,7 @@ export const LoginRegister = (props) => {
 
     return (
         <div id="login-register">
-            <Login />
+            <Login setUser={props.setUser} />
             <div className="vdivider"></div>
             <Register />
         </div>

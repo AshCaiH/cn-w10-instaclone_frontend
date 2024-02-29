@@ -1,13 +1,17 @@
-export const UserInfo = (props) => {
+export const UserControls = (props) => {
 
     return (
-        <div className="navbar-user">
-            <div className="avatar" />
-            <p>User Name</p>
-            <div className="vdivider" />
-            <p>Logout Icon</p>            
-        </div>
+        <>
+        { props.user &&
+            <div className="navbar-user">
+                <div className="avatar" />
+                <p>Hello <span className="userinfo-name">{props.user.username}</span></p>
+                <div className="vdivider" />
+                <a onClick={() => {props.setUser(null)}}>Logout</a>            
+            </div>
+        }
+        </>
     )
 }
 
-export default UserInfo;
+export default UserControls;
