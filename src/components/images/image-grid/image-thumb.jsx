@@ -15,7 +15,7 @@ export const ImageThumb = (props) => {
 
     return (
         <div className="polaroid" style={{
-            // rotate: randomAngle(6),
+            rotate: randomAngle(6),
         }}>
             <a href={props.image.urlRegular} target="_blank"><div className="image-thumb" style={{
                 backgroundImage: `url(${props.image.urlSmall})`,
