@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/_main'
-import { userContext } from './common/contexts'
+import { imagesContext, userContext } from './common/contexts'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/_main'
 
 function App() {
     const [user, setUser] = useState(null);
+    const [images, setImages] = useState({page: null, images: null});
 
     const routes = [{
         path: "/",
@@ -20,6 +21,8 @@ function App() {
 
     return (
         <userContext.Provider value={{ user, setUser }}>
+        <imagesContext.Provider value={{ user, setUser }}>
+
         < HashRouter basename="">
 
             < Navbar 
@@ -34,6 +37,8 @@ function App() {
             </Routes >
 
         </HashRouter>
+
+        </imagesContext.Provider>
         </userContext.Provider>
     )
 }
