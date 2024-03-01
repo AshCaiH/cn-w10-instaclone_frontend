@@ -43,8 +43,22 @@
     animation: rotating 2s linear infinite;
 }
 
+path {
+    stroke: white;
+    stroke-width: 10px; 
+}
+
 .like-icon {
+    position:relative;
+    top: 0;
+    transition: all 0.05s;
     font-size: 32pt;
+    filter: drop-shadow(0 5px 1px rgba(85, 74, 74, 0.438));
+}
+
+.like-icon:hover {
+    top:5px;
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.301));
 }
 
 .like-icon.liked {
