@@ -20,8 +20,6 @@ function App() {
         title: "Likes"
     }]
 
-    console.log(import.meta.env.VITE_SERVER_URL)
-
     return (        
         <userContext.Provider value={{ user, setUser }}>
         <imagesContext.Provider value={{ user, setUser }}>
