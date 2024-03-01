@@ -15,7 +15,7 @@ export const PageLikes = (props) => {
 
                 "Content-Type": "application/json",
             }
-            const response = await getRequest(`http://localhost:5001/user/likes`, headers);
+            const response = await getRequest(`${import.meta.env.VITE_SERVER_URL}/user/likes`, headers);
 
             console.log(response);
 

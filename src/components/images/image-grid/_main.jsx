@@ -11,7 +11,7 @@ export const ImageGrid = (props) => {
 
     useEffect(() => {
         const fetchImages = async() => {
-            const response = await getRequest(`http://localhost:5001/unsplash/getlist/${1}`);
+            const response = await getRequest(`${import.meta.env.VITE_SERVER_URL}/unsplash/getlist/${1}`);
 
             setImages(response.images);
         }

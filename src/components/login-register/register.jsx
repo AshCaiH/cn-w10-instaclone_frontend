@@ -13,7 +13,7 @@ export const Register = (props) => {
             email:      email,
         });
 
-        const response = await postRequest("http://localhost:5001/user/register", query);
+        const response = await postRequest(`${import.meta.env.VITE_SERVER_URL}/user/register`, query);
 
         props.setFeedback(response);
 

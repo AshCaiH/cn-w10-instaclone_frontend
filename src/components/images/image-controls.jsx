@@ -24,7 +24,7 @@ export const ImageControls = (props) => {
                 "Content-Type": "application/json",
             }
     
-            const response = await postRequest(`http://localhost:5001/image/liked`, query, headers);
+            const response = await postRequest(`${import.meta.env.VITE_SERVER_URL}/image/liked`, query, headers);
     
             setLiked(response.like);
         }
@@ -41,9 +41,9 @@ export const ImageControls = (props) => {
         }
 
         if (!liked) {
-            const response = await postRequest(`http://localhost:5001/image/like`, query, headers);
+            const response = await postRequest(`${import.meta.env.VITE_SERVER_URL}/image/like`, query, headers);
         } else {
-            const response = await deleteRequest(`http://localhost:5001/image/unlike`, query, headers);
+            const response = await deleteRequest(`${import.meta.env.VITE_SERVER_URL}/image/unlike`, query, headers);
         }
 
         setLiked(!liked);

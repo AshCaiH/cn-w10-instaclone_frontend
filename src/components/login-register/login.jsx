@@ -11,7 +11,7 @@ export const Login = (props) => {
             password:   password,
         });
 
-        const response = await postRequest("http://localhost:5001/user/login", query);
+        const response = await postRequest(`${import.meta.env.VITE_SERVER_URL}/user/login`, query);
 
         props.setFeedback(response);
         props.setUser(response.user);
