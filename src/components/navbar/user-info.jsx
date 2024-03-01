@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const UserControls = (props) => {
 
     return (
@@ -7,7 +9,7 @@ export const UserControls = (props) => {
                 <div className="avatar" />
                 <p>Hello <span className="userinfo-name">{props.user.username}</span></p>
                 <div className="vdivider" />
-                <a onClick={() => {props.setUser(null)}}>Logout</a>            
+                <Link to="/" onClick={() => {props.setUser(null)}}>Logout</Link>
             </div>
         }
         </>
