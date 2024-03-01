@@ -1,9 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { AiOutlineLoading } from "react-icons/ai";
 
 import ImageThumb from "../../components/images/image-grid/image-thumb";
-import { userContext } from "../../common/contexts";
 import { getRequest } from "../../common/requests";
 
 export const PageLikes = (props) => {

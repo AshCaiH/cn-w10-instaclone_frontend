@@ -12,6 +12,10 @@ export const ImageControls = (props) => {
 
     useEffect(() => {
         const checkIfLiked = async () => {
+            // The likes pages receives slightly different information from the database
+            // so this makes sure everything matches up.
+            if (props.image.ImageId) props.image.id = props.image.ImageId;
+
             const query = JSON.stringify({ id: props.image.id });
     
             const headers = {
