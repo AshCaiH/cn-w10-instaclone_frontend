@@ -4,6 +4,9 @@
     justify-content: center;
 
     height: fit-content;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 #login-register>.section {
