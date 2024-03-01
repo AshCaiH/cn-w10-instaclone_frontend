@@ -4,7 +4,10 @@ const parse = async (response) => {
 
 export async function postRequest(url, query, headers) {
 
-    if (!headers) headers = {"Content-Type": "application/json"}
+    if (!headers) headers = {
+        "Content-Type": "application/json", 
+        "Access-Control-Allow-Origin": "https://api.unsplash.com"
+    }
 
     return parse(await fetch(url, {
         method: "POST",
