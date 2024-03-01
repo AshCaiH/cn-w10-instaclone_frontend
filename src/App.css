@@ -22,6 +22,12 @@
     background-color: rgb(250, 156, 119);
 }
 
+h2 {
+    background: rgba(255, 255, 255, 0.87);
+    padding: 10px 20px;
+    rotate: 1deg;
+}
+
 .section {    
     display: flex;
     flex-direction: column;
