@@ -20,7 +20,7 @@ function App() {
         title: "Likes"
     }]
 
-    return (
+    return (        
         <userContext.Provider value={{ user, setUser }}>
         <imagesContext.Provider value={{ user, setUser }}>
 
