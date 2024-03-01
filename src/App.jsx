@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/_main'
 import { imagesContext, userContext } from './common/contexts'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PageHome from './pages/home/_main'
 import PageLikes from './pages/likes/_main'
 
@@ -24,7 +24,7 @@ function App() {
         <userContext.Provider value={{ user, setUser }}>
         <imagesContext.Provider value={{ user, setUser }}>
 
-        < HashRouter basename="">
+        < BrowserRouter basename="">
 
             < Navbar 
                 setUser={setUser} 
@@ -37,7 +37,7 @@ function App() {
                 })}                
             </Routes >
 
-        </HashRouter>
+        </BrowserRouter>
 
         </imagesContext.Provider>
         </userContext.Provider>
