@@ -8,12 +8,11 @@ import { getRequest } from "../../common/requests";
 
 export const PageLikes = (props) => {
     const [images, setImages] = useState(null);
-    const user = useContext(userContext).user;
 
     useEffect(() => {
         const fetchImages = async() => {
             const headers = {
-                authorization: "Bearer " + user.token,
+                authorization: "Bearer " + props.user.token,
 
                 "Content-Type": "application/json",
             }
@@ -25,11 +24,11 @@ export const PageLikes = (props) => {
         }
 
         fetchImages();
-    }, [user.token]);
+    }, [props.user.token]);
 
     return (
         <div className="section">
-            <h2>{user.username}&lsquo;s Liked Images</h2>
+            <h2>{props.user.username}&lsquo;s Liked Images</h2>
             { images ?
                 <div id="image-grid"> 
                     { images.map((item) => {

@@ -2,14 +2,15 @@
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #image-grid .polaroid {
     position: relative;
     display: block;
-    margin: 10px;
+    margin: 20px;
     background-color: rgb(247, 239, 225);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.336);
 }
 
 #image-grid .image-thumb {
