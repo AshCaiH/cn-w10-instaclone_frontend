@@ -35,6 +35,7 @@
 
 #navbar .userinfo-name {
     font-weight: bold;
+    margin-right: 20px;
 }
 
 #navbar>a {

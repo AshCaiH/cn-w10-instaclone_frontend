@@ -10,7 +10,13 @@
     display: block;
     margin: 20px;
     background-color: rgb(247, 239, 225);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.336);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.658);
+    transition: all ease-in 0.1s;
+}
+
+#image-grid .polaroid:hover {
+    scale: 1.02;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.466);
 }
 
 #image-grid .image-thumb {
