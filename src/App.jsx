@@ -3,7 +3,8 @@ import './App.css'
 import Navbar from './components/navbar/_main'
 import { imagesContext, userContext } from './common/contexts'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/home/_main'
+import PageHome from './pages/home/_main'
+import PageLikes from './pages/likes/_main'
 
 function App() {
     const [user, setUser] = useState(null);
@@ -11,11 +12,11 @@ function App() {
 
     const routes = [{
         path: "/",
-        element: <Home user={user} setUser={setUser}/>,
+        element: <PageHome user={user} setUser={setUser}/>,
         title: "Home"
     },{
         path: "/likes",
-        element: <Home user={user} setUser={setUser}/>,
+        element: <PageLikes user={user} setUser={setUser}/>,
         title: "Likes"
     }]
 
@@ -32,7 +33,7 @@ function App() {
 
             < Routes >
                 {routes.map((item, index) => {
-                    return <Route path = "/" key={index} element={item.element}/>
+                    return <Route path = {item.path} key={index} element={item.element}/>
                 })}                
             </Routes >
 
