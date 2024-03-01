@@ -8,7 +8,6 @@ export const UserControls = (props) => {
             <div className="navbar-user">
                 <div className="avatar" />
                 <p>Hello <span className="userinfo-name">{props.user.username}</span></p>
-                <div className="vdivider" />
                 <Link to="/" onClick={() => {props.setUser(null)}}>Logout</Link>
             </div>
         }
