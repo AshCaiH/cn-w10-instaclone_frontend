@@ -48,6 +48,7 @@ h2 {
     font-size: 24pt;
     margin: 30px;
     animation: rotating 2s linear infinite;
+    color: white;
 }
 
 path {
