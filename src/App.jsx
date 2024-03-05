@@ -8,7 +8,6 @@ import PageLikes from './pages/likes/_main'
 
 function App() {
     const [user, setUser] = useState(null);
-    const [images, setImages] = useState({page: null, images: null});
 
     const routes = [{
         path: "/",
@@ -20,11 +19,10 @@ function App() {
         title: "Likes"
     }]
 
-    return (        
+    return (
+        
         <userContext.Provider value={{ user, setUser }}>
-        <imagesContext.Provider value={{ user, setUser }}>
-
-        < BrowserRouter basename="">
+            < BrowserRouter basename="">
 
             < Navbar 
                 setUser={setUser} 
@@ -33,14 +31,14 @@ function App() {
 
             < Routes >
                 {routes.map((item, index) => {
-                    return <Route path = {item.path} key={index} element={item.element}/>
-                })}                
+                    if (user) return <Route path={item.path} element={item.element} />;
+                    else return <Route path={item.path} element={<PageHome setUser={setUser} user={user}/>} />
+                })}
             </Routes >
+            </BrowserRouter>
 
-        </BrowserRouter>
-
-        </imagesContext.Provider>
         </userContext.Provider>
+        
     )
 }
 
